@@ -1,4 +1,6 @@
-﻿using DevExpress.ExpressApp;
+//     Created a class to show the task as crossed out when the task is marked as completed.
+
+using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
 using DevExpress.Persistent.Base;
 using emp_mngt.Module.BusinessObjects;
