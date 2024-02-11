@@ -1,0 +1,12 @@
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\bin\Debug\net8.0\emp_mngt.Module.deps.json
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\bin\Debug\net8.0\emp_mngt.Module.dll
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\bin\Debug\net8.0\emp_mngt.Module.pdb
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.csproj.AssemblyReference.cache
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.AssemblyInfoInputs.cache
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.AssemblyInfo.cs
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.csproj.CoreCompileInputs.cache
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.dll
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\refint\emp_mngt.Module.dll
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\emp_mngt.Module.pdb
+C:\Users\Bilgehan Kaplan\source\repos\emp_mngt\emp_mngt.Module\obj\Debug\net8.0\ref\emp_mngt.Module.dll

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="emp_mngt">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+    <Class Name="emp_mngt.Module.BusinessObjects.Payroll">
+      <OwnMembers>
+        <Member Name="GrossPay" DisplayFormat="${0:#,###,##0.##############################}" />
+        <Member Name="NetPay" DisplayFormat="${0:#,###,##0.##############################}" />
+        <Member Name="OvertimePayRate" DisplayFormat="${0:#,###,##0.##############################}" />
+        <Member Name="PayRate" DisplayFormat="${0:#,###,##0.##############################}" />
+        <Member Name="TaxRate" DisplayFormat="%{0:#,###,##0.##############################}" />
+        <Member Name="TotalTax" DisplayFormat="${0:#,###,##0.##############################}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="emp_mngt.Module.BusinessObjects.Tasks">
+      <AppearanceRules>
+        <AppearanceRule Id="PriorityRed" BackColor="255, 192, 192" Criteria="[Priority] = ##Enum#emp_mngt.Module.BusinessObjects.Priority,High#" TargetItems="*" IsNewNode="True" />
+        <AppearanceRule Id="StatusCompleted" FontStyle="Strikeout" TargetItems="*" Criteria="[Status] = ##Enum#emp_mngt.Module.BusinessObjects.Status,Completed#" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Event_ListView" Caption="Calendar" />
+          <Item Id="PortfolioFileData_ListView" Visible="False" />
+          <Item Id="Position_ListView" QuickAccessItem="False" Visible="False" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Departments_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Direction="Vertical" RelativeSize="11.428571428571429">
+            <LayoutGroup Id="Departments_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="37.5" IsNewNode="True" />
+              <LayoutItem Id="Location" ViewItem="Location" Index="1" RelativeSize="27.083333333333332" IsNewNode="True" />
+              <LayoutItem Id="Office" ViewItem="Office" Index="2" RelativeSize="35.416666666666664" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Departments" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="44.166666666666664" Caption="Description">
+            <LayoutItem Id="NumberOfEmployees" ViewItem="NumberOfEmployees" Index="0" RelativeSize="8.086253369272237" IsNewNode="True" />
+            <LayoutItem Id="DepartmentHead" ViewItem="DepartmentHead" Index="1" RelativeSize="7.008086253369272" IsNewNode="True" />
+            <LayoutItem Id="Description" RelativeSize="84.90566037735849" Index="2" CaptionLocation="Left" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="44.404761904761905">
+            <LayoutGroup Id="Employee" RelativeSize="100">
+              <LayoutItem Id="Employee" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Position" RelativeSize="100">
+              <LayoutItem Id="Position" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Departments_ListView" AllowEdit="True" />
+    <DetailView Id="Payroll_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="32.78195488721804">
+            <LayoutGroup Id="Payroll" RelativeSize="51.37614678899082" Direction="Vertical" Caption="Employee Details">
+              <LayoutGroup Id="Payroll_col1" RelativeSize="100">
+                <LayoutItem Id="Employee" RelativeSize="50" />
+                <LayoutItem Id="EMail" RelativeSize="50" />
+                <LayoutItem Id="PayRate" RelativeSize="74.78991596638656" Index="2" Removed="True" />
+                <LayoutItem Id="PaymentDay" RelativeSize="11.926605504587156" Index="3" Removed="True" />
+                <LayoutItem Id="PayPeriodEnd" RelativeSize="10.655737704918034" Index="3" Removed="True" />
+                <LayoutItem Id="PayPeriod" RelativeSize="13.131313131313131" Removed="True" />
+                <LayoutItem Id="PayPeriodStart" RelativeSize="10.655737704918034" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Payroll_col2" RelativeSize="50.055617352614014" Removed="True">
+                <LayoutItem Id="TaxRate" RelativeSize="13.541666666666666" Index="1" Removed="True" />
+                <LayoutItem Id="TotalTax" RelativeSize="17.80821917808219" Index="2" Removed="True" />
+                <LayoutItem Id="GrossPay" RelativeSize="13.541666666666666" Index="3" Removed="True" />
+                <LayoutItem Id="NetPay" RelativeSize="17.708333333333332" Index="3" Removed="True" />
+                <LayoutItem Id="Hours" RelativeSize="14.285714285714286" Removed="True" />
+                <LayoutItem Id="OvertimeHours" RelativeSize="10.655737704918034" Removed="True" />
+                <LayoutItem Id="OvertimePayRate" RelativeSize="13.131313131313131" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item3" ShowCaption="True" Caption="Period" CaptionLocation="Top" Direction="Horizontal" Index="1" RelativeSize="48.62385321100918" IsNewNode="True">
+              <LayoutGroup Id="Auto608477fa-3dd5-4255-af3b-7dade9e3c794" ShowCaption="False" Caption="Auto608477fa-3dd5-4255-af3b-7dade9e3c794(8)" Index="0" RelativeSize="49.887133182844245" IsNewNode="True">
+                <LayoutItem Id="PayPeriod" ViewItem="PayPeriod" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="PayPeriodStart" ViewItem="PayPeriodStart" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Autob5b19ea6-f341-4dc4-a433-43407b8040a0" ShowCaption="False" Caption="Autob5b19ea6-f341-4dc4-a433-43407b8040a0(11)" Index="1" RelativeSize="50.112866817155755" IsNewNode="True">
+                <LayoutItem Id="PaymentDay" ViewItem="PaymentDay" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="PayPeriodEnd" ViewItem="PayPeriodEnd" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Note" RelativeSize="67.21804511278195">
+            <LayoutGroup Id="Item5" ShowCaption="False" Caption="py" CaptionLocation="Top" Direction="Horizontal" Index="0" RelativeSize="32.214765100671144" IsNewNode="True">
+              <LayoutGroup Id="Item4" ShowCaption="True" Caption="Total Payroll" CaptionLocation="Top" Index="0" RelativeSize="49.89035087719298" IsNewNode="True">
+                <LayoutItem Id="GrossPay" ViewItem="GrossPay" Index="0" RelativeSize="36.734693877551024" IsNewNode="True" />
+                <LayoutItem Id="TotalTax" ViewItem="TotalTax" Index="1" RelativeSize="26.53061224489796" IsNewNode="True" />
+                <LayoutItem Id="NetPay" ViewItem="NetPay" Index="2" RelativeSize="36.734693877551024" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" ShowCaption="True" Caption="Payment Details" CaptionLocation="Top" Index="1" RelativeSize="50.10964912280702" Direction="Vertical" IsNewNode="True">
+                <LayoutItem Id="TaxRate" ViewItem="TaxRate" Index="0" RelativeSize="36.734693877551024" IsNewNode="True" />
+                <LayoutItem Id="PayRate" ViewItem="PayRate" Index="1" RelativeSize="26.53061224489796" IsNewNode="True" />
+                <LayoutItem Id="Hours" ViewItem="Hours" Index="2" RelativeSize="36.734693877551024" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Horizontal" Index="1" RelativeSize="17.002237136465325" Caption="Overtime Pay" IsNewNode="True">
+              <LayoutItem Id="OvertimePayRate" ViewItem="OvertimePayRate" Index="0" RelativeSize="49.887133182844245" IsNewNode="True" />
+              <LayoutItem Id="OvertimeHours" ViewItem="OvertimeHours" Index="1" RelativeSize="50.112866817155755" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="50.78299776286354" Caption="Notes" IsNewNode="True">
+              <LayoutItem Id="Note" ViewItem="Note" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="Note" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Tasks_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.904761904761905">
+            <LayoutGroup Id="Tasks" RelativeSize="100" Caption="Details">
+              <LayoutGroup Id="Tasks_col1" RelativeSize="49.955555555555556">
+                <LayoutItem Id="Subject" RelativeSize="36.734693877551024" />
+                <LayoutItem Id="AssignedTo" RelativeSize="21.666666666666668" Index="1" Removed="True" />
+                <LayoutItem Id="StartDay" RelativeSize="26.53061224489796" Index="1" />
+                <LayoutItem Id="DueDate" RelativeSize="36.734693877551024" Index="2" />
+                <LayoutItem Id="Status" RelativeSize="17.80821917808219" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Tasks_col2" RelativeSize="50.044444444444444" Caption="Tasks_col2" Direction="Vertical">
+                <LayoutItem Id="AssignedTo" ViewItem="AssignedTo" Index="0" RelativeSize="36.734693877551024" IsNewNode="True" />
+                <LayoutItem Id="ActualWorkHours" RelativeSize="17.80821917808219" Index="1" Removed="True" />
+                <LayoutItem Id="DateCompleted" RelativeSize="76.71232876712328" Index="1" Removed="True" />
+                <LayoutItem Id="PercentCompleted" RelativeSize="17.80821917808219" Index="1" Removed="True" />
+                <LayoutItem Id="Status" ViewItem="Status" Index="1" RelativeSize="26.53061224489796" IsNewNode="True" />
+                <LayoutItem Id="Priority" RelativeSize="36.734693877551024" Index="2" />
+                <LayoutItem Id="EstimatedWorkHours" RelativeSize="17.80821917808219" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Description" RelativeSize="43.69047619047619">
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="28.88283378746594" Caption="Additional Information" Direction="Horizontal" IsNewNode="True">
+              <LayoutGroup Id="Auto1e90e3c7-0048-402a-8680-3fe7f1fdb21e" ShowCaption="False" Caption="" Index="0" RelativeSize="49.955555555555556" IsNewNode="True">
+                <LayoutItem Id="EstimatedWorkHours" ViewItem="EstimatedWorkHours" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="ActualWorkHours" ViewItem="ActualWorkHours" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto94061ba0-e9de-436a-885e-ea4b97839229" ShowCaption="False" Caption="" Index="1" RelativeSize="50.044444444444444" IsNewNode="True">
+                <LayoutItem Id="PercentCompleted" ViewItem="PercentCompleted" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="DateCompleted" ViewItem="DateCompleted" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="71.11716621253406" Caption="Descrription" IsNewNode="True">
+              <LayoutItem Id="Description" ViewItem="Description" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="Description" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Employee_Group" Direction="Vertical" RelativeSize="39.404761904761905">
+            <LayoutItem Id="Employee" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

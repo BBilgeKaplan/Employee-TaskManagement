@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Employees_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="42.410714285714285">
+            <LayoutGroup Id="Employees" RelativeSize="55.43859649122807" Caption="Details">
+              <LayoutGroup Id="Employees_col1" RelativeSize="33.333333333333336">
+                <LayoutItem Id="Title" RelativeSize="28.333333333333332" />
+                <LayoutItem Id="FirstName" RelativeSize="21.666666666666668" />
+                <LayoutItem Id="LastName" RelativeSize="21.666666666666668" />
+                <LayoutItem Id="FullName" RelativeSize="28.333333333333332" />
+                <LayoutItem Id="BirthDay" RelativeSize="23.28767123287671" Index="4" Removed="True" />
+                <LayoutItem Id="Email" RelativeSize="15.116279069767442" Index="4" Removed="True" />
+                <LayoutItem Id="Position" RelativeSize="13.131313131313131" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Employees_col2" RelativeSize="66.66666666666667" Caption="Employees_col2" Direction="Horizontal">
+                <LayoutGroup Id="Auto516375ef-b2ca-476a-933d-c1bc24ccaafb" ShowCaption="False" Caption="" Index="0" RelativeSize="50">
+                  <LayoutItem Id="Email" ViewItem="Email" Index="0" RelativeSize="28.333333333333332" />
+                  <LayoutItem Id="BirthDay" ViewItem="BirthDay" Index="1" RelativeSize="21.666666666666668" />
+                  <LayoutItem Id="Address" ViewItem="Address" Index="2" RelativeSize="50" />
+                </LayoutGroup>
+                <LayoutItem Id="Image" RelativeSize="50" Index="1" CaptionLocation="Top" ShowCaption="False" />
+                <LayoutItem Id="Address" ViewItem="Address" Index="2" RelativeSize="21.666666666666668" Removed="True" />
+                <LayoutItem Id="Office" RelativeSize="69.6969696969697" Index="2" Removed="True" />
+                <LayoutItem Id="Departments" RelativeSize="56.56565656565657" Index="3" Removed="True" />
+                <LayoutItem Id="WeddingDate" RelativeSize="10.655737704918034" Index="3" Removed="True" />
+                <LayoutItem Id="NickName" RelativeSize="13.131313131313131" Removed="True" />
+                <LayoutItem Id="Spouse" RelativeSize="10.655737704918034" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="44.56140350877193" Caption="Additional Information" Direction="Horizontal">
+              <LayoutGroup Id="Autof0033a3f-9271-49f3-9f88-c2949e912a79" ShowCaption="False" Caption="" Index="0" RelativeSize="50">
+                <LayoutItem Id="NickName" ViewItem="NickName" Index="0" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="Spouse" ViewItem="Spouse" Index="1" RelativeSize="27.659574468085108" />
+                <LayoutItem Id="WeddingDate" ViewItem="WeddingDate" Index="2" RelativeSize="36.170212765957444" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto4d7b4dcd-f7d5-4ce3-b5ab-6c1800155d1e" ShowCaption="False" Caption="" Index="1" RelativeSize="50">
+                <LayoutItem Id="Departments" ViewItem="Departments" Index="0" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="Office" ViewItem="Office" Index="1" RelativeSize="27.659574468085108" />
+                <LayoutItem Id="Position" ViewItem="Position" Index="2" RelativeSize="36.170212765957444" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Note" RelativeSize="28.720238095238095">
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Notes">
+              <LayoutItem Id="Note" ViewItem="Note" Index="0" RelativeSize="100" ShowCaption="False" />
+            </LayoutGroup>
+            <LayoutItem Id="Note" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Task_Group" Direction="Vertical" RelativeSize="28.86904761904762">
+            <LayoutItem Id="Task" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employees_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Title" Index="0" />
+        <ColumnInfo Id="FirstName" Index="1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
